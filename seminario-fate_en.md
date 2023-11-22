@@ -21,8 +21,9 @@ blockquote {
 }
 </style>
 
-# Equidad, Rendición de Cuentas, Transparencia y Ética en el Aprendizaje Automático
-### Introducción a los Modelos Computacionales. Grado en Ingeniería Informática. Universidad de Córdoba. 2023-2024
+# Fairness, Accountability, Transparency and Ethics in Machine Learning.
+
+### Introduction to Computational Modelling. Degree in Computer Engineering. University of Cordoba. 2023-2024
 
 Javier Sánchez Monedero (Universidad de Córdoba)
 
@@ -30,18 +31,20 @@ Javier Sánchez Monedero (Universidad de Córdoba)
 
 ![bg right fit](pics/Superior_Gort_Judge.jpg)
 
-# Objetivos
+# Objectives
 
-- Introducción y motivación a FATE en inteligencia artificial
-- Cuantificando y mitigando sesgos: [FairLearn](https://fairlearn.org/)
+
+- Introduction and motivation to FATE in artificial intelligence
+
+- Quantifying and mitigating bias: [FairLearn](https://fairlearn.org/)
 
 ---
 <!-- _backgroundColor: "#123" -->
 <!-- _color: "#fff" -->
-##### <!--fit--> Introducción y motivación a FATE
+##### <!--fit--> Introduction and motivation to FATE
 --- 
 
-# ¿Por dónde empezar? Libros
+# Where to start? Books
 
 ![h:13em ](pics/armas-destruccion-matematica.jpg) ![h:13em ](pics/book-data-feminism.jpg) ![h:13em ](pics/fairmlbook.png)
 
@@ -54,49 +57,57 @@ Javier Sánchez Monedero (Universidad de Córdoba)
 -->
 --- 
 
-# ¿Por dónde empezar? En vídeo
+# Where to start? Video
 
 ![bg right fit](pics/coded_bias.jpg)
 
-- Documental [Coded Bias](https://www.codedbias.com/)
-- TED Talk de Joy Buolamwini [How I'm fighting bias in algorithms](https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms)
+- Documentary [Coded Bias](https://www.codedbias.com/)
+- TED Talk dy Joy Buolamwini [How I'm fighting bias in algorithms](https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms)
 
 ---
-# FATE:
+# FATE
 
 ![bg right fit](pics/facctconference.png)
 
-- **Fairness**: imparcialidad/ecuanimidad
-- **Accountability**: rendición de cuentas
-- **Transparency**: transparencia 
-- **Ethics**: ética
+- **Fairness**
+- **Accountability**
+- **Transparency**
+- **Ethics**
 
 [facctconference.org](https://facctconference.org/)
 [facctconference.org/network](https://facctconference.org/network/)
 
 ---
-# Objetivos del seminario
+# Seminar objectives
 
-Discriminación en **sistemas/modelos** que toman decisiones trascendentales
-- Esto no considera otras formas de discriminación o injusticia
-- Las cuestiones de discriminación/igualdad necesitan de otro tipo de intervenciones no técnicas (ver libros recomendados)
 
-**La discriminación no es un concepto general**, depende: 
-- Dominio del problema
-- Grupo social
+Discrimination in **systems/models** that make/support decisions with human consecuences.
 
-<!-- La presentación de [Judging the algorithm](https://arxiv.org/abs/2203.03723) dará una visión más **interdisciplinar** de este problema.  -->
+- This does not consider other forms of discrimination or injustice.
+
+- Discrimination/equality issues need other kinds of non-technical interventions (see recommended books)
+
+
+**Discrimination is not a general concept**, it depends: 
+
+- Domain of the problem
+
+- Social group
+
 
 ---
-# Grupos protegidos
+# Protected Groups
 
 ![bg right:40%](pics/Angela-Davis-copy.webp)
 
-Clases protegidas (no en todos los contextos): 
-- EEUU: “raza”, color, sexo, religión, ciudadanía, embarazo, edad...
-- España: género, embarazo, “raza” (ley igualdad de trato), embarazo...
+Protected classes (not in all contexts): 
 
-La definición de grupos protegidos va más allá e incluye las categorías [no binarias](https://www.genderbread.org/) y la [interseccionalidad](https://es.wikipedia.org/wiki/Interseccionalidad)
+- USA: "race", colour, gender, religion, religion, citizenship, pregnancy, age....
+
+- Spain: gender, pregnancy, "race" (equal treatment law)...
+
+
+The definition of protected groups goes further and includes the following categories [non-binary](https://www.genderbread.org/) and [intersectionality](https://en.wikipedia.org/wiki/Intersectionality)
 
 > [There’s No Scientific Basis for Race—It’s a Made-Up Label](https://www.nationalgeographic.com/magazine/2018/04/race-genetics-science-africa). National Geographic. 2018, March 12. 
 
@@ -108,7 +119,7 @@ Con el "pero" de lo difícil de expresar la pertenencia a grupo, es interesante 
 ![bg right fit](pics/intersectionalityscore.png)-->
 
 ---
-# Ley integral igualdad de trato y no discriminación
+# Law on equal treatment and non-discrimination
 
 [Artículo 23 Ley 15/2022, de 12 de julio](https://www.boe.es/buscar/doc.php?id=BOE-A-2022-11589): 
 
@@ -116,28 +127,31 @@ Con el "pero" de lo difícil de expresar la pertenencia a grupo, es interesante 
 
 
 ---
-# Las personas también tienen sesgos
+# ...but people also have biases
 
 ![w:12em](pics/futurama-judge-person.jpg) ![w:12em](pics/futurama-judge-robot.jpg)
 
-Diferencias (O'Neil 2016): 
-* Sistematización
-* Escala
-* Nuevos grupos "digitales" discriminados
+Differences (O'Neil 2016): 
 
-> O’Neil, C (2018). [Armas de destrucción matemática](https://capitanswing.com/libros/armas-de-destruccion-matematica/)
+* Systematisation
+
+* Scale
+
+* New "digital" groups discriminated against
+
+> O’Neil, C (2018). [Weapons of Math Destruction](https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction)
 
 ---
-# Casos: PNL + Visión Artificial
+# Cases: NLP + Computer Vision
 
 ![h:20em center](pics/cv-gender-bias-4.png)
 
 > Zhao, J. et. al (2017). [Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints.](https://www.aclweb.org/anthology/D17-1319) 
 
 ---
-# Casos: reconocimiento facial
+# Case: facial recognition
 
-Análisis interseccional del rendimiento en reconocimiento facial de Amazon Rekognition. La menor tasa de acierto se da para las mujeres de piel oscura. 
+Intersectional analysis of Amazon Rekognition face recognition performance. The lowest hit rate is for dark-skinned women. 
 
 ![](pics/amazon-recoknition.png)
 
@@ -145,15 +159,15 @@ Análisis interseccional del rendimiento en reconocimiento facial de Amazon Reko
 
 
 ---
-# Casos: justicia
+# Case: justice
 
-* **COMPAS** (*Correctional Offender Management Profiling for Alternative Sanctions*): herramienta para calcular puntuaciones de riesgo de reincidencia de una persona en espera de juicio
-* Utiliza ML para entrenar un modelo de estimación de **riesgo a partir de los registros históricos**
-* **Variables de entrada**: historial criminal, tipo de cargos, género, grupo étnico, edad, preguntas sobre el entorno...
-* **Variable dependiente**: grado de riesgo los grados altos van a prisión preventiva
+* **COMPAS** (*Correctional Offender Management Profiling for Alternative Sanctions*): tool for calculating recidivism risk scores for a person awaiting trial
+* Uses ML to train a **risk estimation model from historical records**.
+* **Input variables**: criminal history, type of charges, gender, ethnicity, age, environmental questions...
+* **Dependent variable**: degree of risk, high degrees go to pre-trial detention.
 
 ---
-# Casos: justicia
+# Case: justice
 
 ![h:14em center](pics/compas-two-cases.png)
 
@@ -164,42 +178,44 @@ Análisis interseccional del rendimiento en reconocimiento facial de Amazon Reko
 ---
 <!-- _backgroundColor: "darkgreen" -->
 <!-- _color: "cornsilk" -->
-# A1. ¿Cómo cuantificarías el sesgo en los problemas anteriores?
+# A1. How would you quantify bias in the above problems?
 
 ![bg right:33% 50%](pics/questionmark.svg)
 
 <!-- Penitenciario: "Predicción" riesgo de reincidencia: el sistema sobreestima el riesgo para afroamericanos en comparación con población blanca-->
-* **Reconocimiento facial**: el modelo tiene menos precisión identificando mujeres con piel oscura
-* **Justicia**: el modelo sobreestima el riesgo de reincidencia de afroamericanos
-* **Procesamiento lenguaje natural**: el sistema reproduce estereotipos de género asociados a profesiones
+* **Facial recognition**: the model is less accurate in identifying women with dark skin.
+
+* **Justice**: the model overestimates the risk of recidivism for African-Americans
+
+* **Natural language processing**: system reproduces gender stereotypes associated with professions
 
 ---
 <!-- _backgroundColor: "#123" -->
 <!-- _color: "#fff" -->
-##### <!--fit--> Cuantificando y mitigando sesgos
+##### <!--fit--> Quantifying and mitigating bias
 
 ---
-# ¿Cómo medir y mitigar el sesgo?
+# How to measure and mitigate bias?
 
-~~Ecuanimidad sin hacer nada (*unawareness*)~~
+~~Fairness through *unawareness*~~
 
 ![center](pics/lol-fairness.svg)
 
-Actualizada del [NIPS 2017 Tutorial on Fairness in Machine Learning](https://fairmlbook.org/tutorial1.html)
+Updated from [NIPS 2017 Tutorial on Fairness in Machine Learning](https://fairmlbook.org/tutorial1.html)
 
 ---
-# Análisis exploratorio
+# Exploratory analysis
 
 ![bg right:33% fit](pics/analisis-preliminar.jpg)
 
-- Comprobar distribución (prevalencia/prior) etiqueta de clase
-- Comprobar distribución (prevalencia/prior) etiqueta de clase por grupos
-- Comprobar: 
+- Check distribution (prevalence/prior) class label
+- Check distribution (prevalence/priority) class label by groups
+- Check: 
   - Visual
-  - Estadística descriptiva
-  - Contraste de hipótesis
+  - Descriptive statistics
+  - Hypothesis testing
 
-Un ejemplo excelente lo podeis ver en Straw, I., & Wu, H. (2022).
+An excellent example can be found in Straw, I., & Wu, H. (2022).
 
 > Straw, I., & Wu, H. (2022). Investigating for bias in healthcare algorithms: A sex-stratified analysis of supervised machine learning models in liver disease prediction. BMJ Health & Care Informatics, 29(1), e100457. https://doi.org/10.1136/bmjhci-2021-100457
 
@@ -209,7 +225,7 @@ Un ejemplo excelente lo podeis ver en Straw, I., & Wu, H. (2022).
 
 
 --- 
-# El "zoo" de las métricas de ecuanimidad
+# The "zoo" of fairness metrics
 
 ![h:19em center](pics/zoo-fairness-metrics.png)
 
@@ -219,52 +235,51 @@ Un ejemplo excelente lo podeis ver en Straw, I., & Wu, H. (2022).
 ---
 <!-- _backgroundColor: "darkgreen" -->
 <!-- _color: "cornsilk" -->
-# A3. Caso judicial
+# A3. Judicial case
 
-* Supongamos test genérico (con o sin técnicas estadísticas) de estimación de riesgo de reincidencia. ¿Qué errores debemos minimizar?
-* Respecto a la clase: ¿qué metricas nos interesan?
-* ¿Y si el test implica pérdida de libertad?
+* Suppose a generic test (with or without statistical techniques) to estimate the risk of recidivism. What errors should we minimise?
+* Regarding the class: what metrics are we interested in?
+* What if the test involves loss of freedom?
 
 
 ---
-# Casos: COMPAS
+# Cases: COMPAS
 
-* **ProPublica**: el sistema discrimina porque sobrestima el riesgo para las personas afroamericanas (falsos positivos diferentes para los grupos: 44,8 % vs 23,4 %)
-* **Northpointe**: el sistema no discrimina porque clasifica el riesgo alto por igual (verdaderos positivos similares para todos los grupos étnicos: 63 % vs 59 %)
+* **ProPublica**: the system discriminates because it overestimates the risk for African Americans (different false positive for the groups: 44.8% vs 23.4%).
+* **Northpointe**: system does not discriminate because it classifies high risk equally (similar true positives for all ethnic groups: 63% vs. 59%)
 
 > Larson, J., & Angwin, J. (2016, May 23). [How We Analyzed the COMPAS Recidivism Algorithm](https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm). ProPublica. 
 
 ---
-# Casos: COMPAS
+# Cases: COMPAS
 
-¿Cómo pueden ser compatibles las definiciones matemáticas de
-equanimidad de ProPublica y Northpointe?
+How can ProPublica's and Northpointe's mathematical definitions of fairness be compatible?
 
 ![center](pics/han_solo_bayes.jpeg)
 
 > Source [Han Solo and Bayesian Priors](https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors)
 
 ---
-# Casos: COMPAS
+# Cases: COMPAS
 
 ![bg right:43% fit](pics/black-vs-white-defendants-decile-scores-rot.png)
 
-Es matemáticamente compatible porque la prevalencia/frecuencia base/probabilidad a priori de los dos grupos es diferente (ver Chouldechova (2017)).
+It is mathematically compatible because the a priori prevalence/baseline frequency/probability of the two groups is different (see Chouldechova (2017)).
 
 > A. Chouldechova. Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments. Big Data, 5(2):153–163, 2017. https://doi.org/10.1089/big.2016.0047 
 ---
 <!-- _backgroundColor: "darkgreen" -->
 <!-- _color: "cornsilk" -->
-# A4. ¿Cómo podemos mitigar?
+# A4. How can we mitigate bias?
 
 ![bg right fit](pics/proxies.jpg)
 
-* Ya tenemos una medida del sesgo estadístico
-* ¿Cómo podríamos mitigar?
-* Pero antes: **¿tiene sentido una intervención estadística/algorítmica?**
-
+* We already have a measure of statistical bias.
+* How could we mitigate?
+* But first: **Does a statistical/algorithmic intervention make sense?**
+ 
 ---
-# Técnicas de mitigación de sesgos
+# Bias mitigation techniques
 
 ![](pics/bias-datadriven-survey.png)
 
@@ -272,7 +287,7 @@ Es matemáticamente compatible porque la prevalencia/frecuencia base/probabilida
 
   
 <!-- ---
-# Inventarios de casos
+# Inventarios de Case
 
 ![bg left fit](pics/automatingsociety-2020-comic.jpg)
 
@@ -285,27 +300,24 @@ Es matemáticamente compatible porque la prevalencia/frecuencia base/probabilida
 [Observatory of Algorithms with Social Impact](https://eticasfoundation.org/oasi) -->
 
 ---
-# Herramientas ML para mitigación y explicabilidad
+# ML tools for mitigation and explainability
 
 ![w:400px](pics/fairlearn_logo.svg)
 https://fairlearn.org/
 
-Otras: 
+Alternatives: 
 
 https://ai-fairness-360.org/
 
 https://pair-code.github.io/what-if-tool/
 
 ---
-# Cuaderno Jupyter con FairLearn y COMPAS
+# Jupyter lab notebook with FairLearn and COMPAS
 
-- Datos de reincidencia general de COMPAS
-- Experimentos simplificados de ProPublica
-
-https://github.com/javism/seminariofate2023
-
+- COMPAS general recidivism data
+- Simplified version of ProPublica experiments
   
-<!-- https://github.com/javism/seminariofate2022/blob/master/IndianLiverPatientDataset-seminar.ipynb -->
+https://github.com/javism/seminariofate2023
 
 <!--
 ---
@@ -321,24 +333,24 @@ https://github.com/javism/seminariofate2023
 ---
 <!-- _backgroundColor: "#123" -->
 <!-- _color: "#fff" -->
-##### <!--fit--> Resumen y Conclusiones 
+##### <!--fit--> Summary and Conclusions
 
 
 ---
-# Recap: Fuentes de sesgo
+# Recap: bias sources
 
 ![h:18em center](pics/how_unfairness_happen.jpg)
 
-> Fuente Luke Vilain.
+> Source Luke Vilain.
 
 ---
-# Resumen
+# Summary
 
-* El paso de prototipos de investigación a aplicaciones reales de la inteligencia artificial ha motivado la aparición de muchas áreas
-* No solo FATE: IA robusta, privacidad en IA (aprendizaje federado, cifrado homeomórfico...), interacción persona-máquina (HCI)...
-* Áreas implicadas según contexto: ética, derecho, política **¡¡Sistemas sociotécnicos!!**
-* Regulaciones (IA Act, GDPR, Ley Rider, AESIA...) y estándares (IEEE,ISO)
-* Oportunidades de aprendizaje y comprender mejor los problemas y los conceptos de estadística.
+* The move from research prototypes to real applications of artificial intelligence has led to the emergence of many research lines
+* Not only FATE: Robust AI, privacy in AI (federated learning, homeomorphic encryption...), human-machine interaction (HCI)...
+* Areas involved according to context: ethics, law, politics ->  **Socio-technical systems!**
+* Regulation (IA Act, GDPR, Rider Act, AESIA...) and standards (IEEE, ISO)
+* Learning opportunities and better understanding of statistical problems and concepts.
 
 <!-- 
 ---
